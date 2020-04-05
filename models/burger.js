@@ -2,8 +2,15 @@
 var orm = require("../config/orm.js");
 
 var burgerInfo = {
+    all: function (cb) {
+        orm.all('burgers', fuction(res) {
+            cb(res);
+        });
+    },
+    create: function (),
 
 
+    update: fuction()
 }
 
 

@@ -17,13 +17,14 @@ router.get("/", function (req, res) {
     });
 
     router.post("/api/burgers", function (req, res) {
-        burgerInfo.insertOne(["burger_name"], [req.body.burger_name], function (data) {
-            res.json({ id: data.insertId });
-        }
+        burgerInfo.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured],
+            function (data) {
+                res.json({ id: data.insertId });
+            }
         );
     });
 
-    router.put("/burgers/update/:id", function (req, res) {
+    router.put("/api/burgers/:id", function (req, res) {
         var condition = "id = " + req.params.id;
         console.log("condition", condition);
         burgerInfo.updateOne({
@@ -37,7 +38,7 @@ router.get("/", function (req, res) {
             }
         });
     });
-    router.deleteOne(condition, function (req, res) {
+    router.delete("/api/burgers/:id", function (req, res) {
         var condition = "id =" + req.params.id;
         console.log("condition", condition);
 
@@ -51,5 +52,5 @@ router.get("/", function (req, res) {
         });
     });
 });
-    // Export routes for server.js to use.
-    module.exports = router;
+// Export routes for server.js to use.
+module.exports = router;

@@ -1,14 +1,14 @@
 $(document).ready(function () {
 
-    $(".devour-form").on("submit", function (event) {
+    $(".devbtn").on("click", function (event) {
         event.preventDefault();
 
-        var burger_id = $(this).children(".burger_id").val();
-        console.log(burger_id);
+        var burger_id = $(this).attr("data-id")
+        alert(burger_id);
         $.ajax({
             method: "PUT",
             // match this up with your Put route api// 
-            url: "/burgers/" + burger_id
+            url: "/api/burgers/" + burger_id
         }).then(function (data) {
             // reload page to display devoured burger in proper column
             location.reload();

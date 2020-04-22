@@ -37,7 +37,7 @@ var orm = {
     },
 
     create: function (table, cols, vals, cb) {
-        var burgerDb = "INSERT INTO ?? (??, ??) VALUES(?, ?)";
+        var burgerDb = "INSERT INTO ??  (??, ??) VALUES(?, ?)";
 
         connection.query(burgerDb, [table, cols[0], cols[1], vals[0], vals[1]], function (err, results) {
             if (err) throw err;
@@ -45,12 +45,12 @@ var orm = {
         });
     },
 
-    update: function (id, cb) {
-        var burgerDb = "UPDATE burgers SET devoured = true WHERE id = ?";
+    update: function (table, cols, vals, cb) {
+        var burgerDb = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
 
-        connection.query(burgerDb, [id], function (err, results) {
+        connection.query(burgerDb, [table,cols[0], vals[0], cols[1], vals[1]], function (err, results) {
             if (err) throw err;
-            cb();
+            cb(results);
         });
     },
     // add a delete a burger 

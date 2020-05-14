@@ -1,6 +1,6 @@
 # Eat The Burger app
 
-The Burger Applicaton is a demo of the ability to utilize a database to use CRUD (Create, Read, Update, and Delete) to allow the user to Add a burger to their List. It will let the user know if the burger has been devoured, or allow them to press the button to "Eat" da Burger. 
+The Burger Application is a demo of the ability to utilize a database to use CRUD (Create, Read, Update, and Delete) to allow the user to Add a burger to their List. It will let the user know if the burger has been devoured, or allow them to press the button to "Eat" da Burger. 
 
 ### [ Eat Da Burger web page](https://eatdaburger1901.herokuapp.com/)
 
@@ -31,7 +31,7 @@ After having the files cloned into your Studio, I would perform a
 * Next you will need to install your code's Dependencies
     * This will capture all the items in your package.json file
 
-See below on how to perfom the install.
+See below on how to perform the install.
 
 ```
 npm i
@@ -67,7 +67,7 @@ node server.js
 
 ### You should now see the serving running
 
-click on the link to open your webbrowser "local host"
+click on the link to open your browser  to "local host"
 
 ```
 Server listening on: http://localhost:8080
@@ -80,7 +80,7 @@ Server listening on: http://localhost:8080
 We deployed with [Heroku](https://dashboard.heroku.com/apps)
 using the the app [JawsDB](https://devcenter.heroku.com/articles/jawsdb)
 
-#### read individual instructions for more detal
+#### read individual instructions for more detail
 
 ## The Web site was Built With
 
@@ -94,7 +94,7 @@ using the the app [JawsDB](https://devcenter.heroku.com/articles/jawsdb)
 
 * **Mike Lusso** - *Team Lead* - [Mlusso06](https://github.com/Mlusso06)
 
-## BootCamp Acknolegments 
+## BootCamp Acknowledgements 
 
 This project was part of the Vanderbilt coding Bootcamp - click [Vanderbilt](https://bootcamps.vanderbilt.edu/)  for details and how you can enroll.
 
